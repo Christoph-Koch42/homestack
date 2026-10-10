@@ -4,7 +4,7 @@ Find anything in the basement and storage rooms, even with no signal.
 QR labels on shelves and boxes, an installable phone app that works offline,
 and a laptop view for searching and printing labels.
 
-Live at (after setup): https://christoph-koch42.github.io/homestack/
+Live at: https://christoph-koch42.github.io/homestack/ (Firebase project `homestack-ed8ab`)
 
 ## Core idea
 
