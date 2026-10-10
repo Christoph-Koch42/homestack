@@ -1,0 +1,51 @@
+/* HomeStack design tokens: Swiss International Style.
+   Every colour, size and timing used in the app comes from here. */
+:root {
+  /* Colour: strict palette. Red is a signal, never decoration. */
+  --bg: #ffffff;
+  --fg: #000000;
+  --muted: #f2f2f2;
+  --accent: #ff3000;
+  --border: #000000;
+  --on-accent: #ffffff; /* only on bold text >= 19px (red/white is 3.7:1, AA large text) */
+
+  /* Structure */
+  --radius: 0;
+  --b-thick: 4px;
+  --b-thin: 2px;
+
+  /* Spacing: 4px base */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --gutter: var(--s-4);
+
+  /* Type: Inter, bundled for offline use. Ratio ~1.333 (perfect fourth) */
+  --font: 'Inter Variable', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --t-xs: 12px;
+  --t-sm: 14px;
+  --t-base: 16px;
+  --t-md: 19px;
+  --t-lg: 25px;
+  --t-xl: 34px;
+  --t-2xl: 45px;
+  --t-3xl: 60px;
+  --t-display: clamp(64px, 22vw, 160px);
+  --track-tight: -0.04em;
+  --track-wide: 0.12em;
+
+  /* Touch */
+  --tap: 44px;
+  --tap-lg: 64px;
+
+  /* Motion: mechanical, no springs */
+  --fast: 150ms linear;
+  --snap: 200ms ease-out;
+
+  --content-max: 1200px;
+}

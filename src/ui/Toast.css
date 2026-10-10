@@ -1,0 +1,53 @@
+.toast-region {
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  bottom: calc(var(--tap-lg) + var(--s-4) + env(safe-area-inset-bottom));
+  left: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--gutter);
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  width: min(100%, 560px);
+  min-height: 56px;
+  padding: var(--s-2) var(--s-2) var(--s-2) var(--s-4);
+  background: var(--fg);
+  color: var(--bg);
+  font-weight: 600;
+  pointer-events: auto;
+  animation: toast-in var(--snap);
+}
+
+@keyframes toast-in {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+.toast__msg {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Red on black is 5.7:1, fine at any size */
+.toast__action {
+  min-height: var(--tap);
+  padding: 0 var(--s-3);
+  border: var(--b-thin) solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+}
+
+.toast__action:active {
+  background: var(--accent);
+  color: var(--fg);
+}

@@ -1,0 +1,41 @@
+.iconbox {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap);
+  height: var(--tap);
+  padding: 0;
+  border: var(--b-thin) solid var(--border);
+  background: var(--bg);
+  color: var(--fg);
+  transition:
+    background-color var(--fast),
+    color var(--fast),
+    transform var(--fast);
+}
+
+.iconbox:active {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+@media (hover: hover) {
+  .iconbox:hover {
+    background: var(--fg);
+    color: var(--bg);
+  }
+}
+
+/* On black surfaces (scanner) */
+.iconbox--dark {
+  border-color: var(--bg);
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.iconbox--active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+}

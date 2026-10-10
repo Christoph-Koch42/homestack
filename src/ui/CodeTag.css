@@ -1,0 +1,15 @@
+.codetag {
+  display: inline-block;
+  padding: 2px 6px;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: var(--t-xs);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.codetag--invert {
+  background: var(--bg);
+  color: var(--fg);
+}

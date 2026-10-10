@@ -1,0 +1,35 @@
+.dialog {
+  width: min(100% - 2 * var(--gutter), 560px);
+  max-height: calc(100dvh - 2 * var(--gutter));
+  padding: var(--s-6);
+  border: var(--b-thick) solid var(--border);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / 0.6);
+}
+
+.dialog[open] {
+  animation: dialog-in var(--snap);
+}
+
+@keyframes dialog-in {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+}
+
+/* Cancel left, the consequential action far right: a stray tap can't hit it */
+.dialog__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-8);
+}
+
+.dialog__title {
+  margin-bottom: var(--s-6);
+  font-size: var(--t-xl);
+}

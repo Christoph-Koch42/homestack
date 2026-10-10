@@ -1,0 +1,99 @@
+.home__search {
+  margin-bottom: var(--s-8);
+}
+
+.home__none {
+  font-size: var(--t-md);
+  font-weight: 600;
+}
+
+.home__grid {
+  display: grid;
+  gap: var(--s-12);
+}
+
+/* 2-column room tiles; on press the whole tile inverts */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: var(--b-thick) solid var(--border);
+  border-left: var(--b-thick) solid var(--border);
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--s-2);
+  height: 100%;
+  min-height: 150px;
+  padding: var(--s-4);
+  border-right: var(--b-thick) solid var(--border);
+  border-bottom: var(--b-thick) solid var(--border);
+  background: var(--bg);
+  text-decoration: none;
+  transition:
+    background-color var(--fast),
+    color var(--fast);
+}
+
+.tiles li:nth-child(4n + 2) .tile,
+.tiles li:nth-child(4n + 3) .tile {
+  background-color: var(--muted);
+}
+
+.tile__count {
+  font-size: var(--t-3xl);
+  font-weight: 900;
+  letter-spacing: var(--track-tight);
+  line-height: 0.9;
+  transition: transform var(--fast);
+  transform-origin: left bottom;
+}
+
+/* Room names are your data: shown as typed, never uppercased */
+.tile__name {
+  font-size: var(--t-md);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.tile:active {
+  background: var(--fg) !important;
+  color: var(--bg);
+}
+
+@media (hover: hover) {
+  .tile:hover {
+    background: var(--fg) !important;
+    color: var(--bg);
+  }
+  .tile:hover .tile__count {
+    transform: scale(1.05);
+  }
+}
+
+/* Desktop: 7:5 asymmetric split */
+@media (min-width: 1024px) {
+  .home__grid {
+    grid-template-columns: 7fr 5fr;
+    align-items: start;
+  }
+
+  .tiles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tiles li .tile {
+    background-color: var(--bg);
+  }
+
+  .tiles li:nth-child(odd) .tile {
+    background-color: var(--muted);
+  }
+}

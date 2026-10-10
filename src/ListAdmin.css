@@ -1,0 +1,147 @@
+.la__section {
+  margin-top: var(--s-12);
+}
+
+.la__add {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3);
+  max-width: 640px;
+}
+
+.la__input {
+  flex: 1;
+  min-width: 0;
+  min-height: var(--tap);
+  border: 0;
+  border-bottom: var(--b-thin) solid var(--border);
+  background: transparent;
+  font-size: var(--t-md);
+  font-weight: 600;
+  outline: none;
+}
+
+.la__input:focus {
+  border-bottom-color: var(--accent);
+}
+
+.la__plus:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.la__plus:disabled {
+  opacity: 0.35;
+}
+
+.la__error {
+  flex-basis: 100%;
+  font-weight: 600;
+}
+
+.la__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: var(--b-thin) solid var(--border);
+}
+
+.la__row {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  min-height: 64px;
+  padding: var(--s-2) 0;
+  border-bottom: var(--b-thin) solid var(--border);
+}
+
+.la__idx {
+  flex: none;
+  width: 2.5ch;
+  color: var(--accent);
+  font-size: var(--t-md);
+  font-weight: 900;
+}
+
+.la__name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  font-size: var(--t-lg);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.la__name:hover {
+  text-decoration: underline;
+}
+
+.la__tools,
+.la__rename {
+  display: flex;
+  gap: var(--s-1);
+}
+
+.la__rename {
+  flex: 1;
+  align-items: center;
+}
+
+.la__tools .iconbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.25;
+}
+
+.la__note {
+  margin-top: var(--s-4);
+}
+
+.la__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.la__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: var(--tap);
+  padding-left: var(--s-3);
+  border: var(--b-thin) solid var(--border);
+  font-weight: 600;
+}
+
+.la__chipx {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap);
+  height: calc(var(--tap) - 2 * var(--b-thin));
+  border: 0;
+  border-left: var(--b-thin) solid var(--border);
+  background: transparent;
+  transition:
+    background-color var(--fast),
+    color var(--fast);
+}
+
+.la__chipx:active {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+@media (hover: hover) {
+  .la__chipx:hover {
+    background: var(--fg);
+    color: var(--bg);
+  }
+}

@@ -1,0 +1,172 @@
+.pv__hero {
+  margin-bottom: var(--s-8);
+}
+
+/* The label code as image: massive, tight, tabular */
+.pv__code {
+  font-size: var(--t-display);
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+  overflow-wrap: anywhere;
+}
+
+.pv__title {
+  font-size: clamp(48px, 14vw, 128px);
+  line-height: 0.88;
+  text-transform: none; /* your room/place name, as typed */
+  overflow-wrap: anywhere;
+}
+
+.pv__name {
+  margin-top: var(--s-3);
+  font-size: var(--t-xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
+}
+
+.pv__type {
+  margin-top: var(--s-3);
+}
+
+.pv__grid {
+  display: grid;
+  gap: var(--s-12);
+}
+
+.pv__main {
+  display: grid;
+  gap: var(--s-12);
+  min-width: 0;
+}
+
+.pv__side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-6);
+  border: var(--b-thick) solid var(--border);
+  background-color: var(--muted);
+}
+
+.pv__path {
+  margin-bottom: var(--s-3);
+  font-size: var(--t-md);
+  font-weight: 700;
+}
+
+.pv__notes {
+  margin-bottom: var(--s-3);
+  white-space: pre-wrap;
+}
+
+.pv__hint {
+  font-weight: 600;
+}
+
+.pv__rowactions {
+  display: flex;
+  gap: var(--s-1);
+  padding-left: var(--s-2);
+}
+
+@media (min-width: 1024px) {
+  .pv__grid {
+    grid-template-columns: 7fr 5fr;
+    align-items: start;
+  }
+
+  .pv__side {
+    position: sticky;
+    top: 96px;
+  }
+}
+
+/* Move confirmation */
+.mc {
+  display: grid;
+  gap: var(--s-1);
+  margin: 0 0 var(--s-6);
+}
+
+.mc dd {
+  margin: 0 0 var(--s-3);
+}
+
+.mc__path {
+  font-size: var(--t-md);
+  font-weight: 700;
+}
+
+.mc__path--to {
+  padding-left: var(--s-3);
+  border-left: var(--b-thick) solid var(--accent);
+}
+
+.mc__count {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  margin-bottom: var(--s-8);
+  padding: var(--s-4) 0;
+  border-top: var(--b-thin) solid var(--border);
+  border-bottom: var(--b-thin) solid var(--border);
+}
+
+.mc__num {
+  font-size: var(--t-3xl);
+  font-weight: 900;
+  letter-spacing: var(--track-tight);
+  line-height: 0.9;
+}
+
+.mc__what {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Batch add bar */
+.batch {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.batch__name {
+  flex: 1;
+  min-width: 0;
+  min-height: var(--tap);
+  border: 0;
+  border-bottom: var(--b-thin) solid var(--border);
+  background: transparent;
+  font-size: var(--t-md);
+  font-weight: 600;
+  outline: none;
+}
+
+.batch__name:focus {
+  border-bottom-color: var(--accent);
+}
+
+.batch__cat {
+  width: 34%;
+  max-width: 200px;
+  min-height: var(--tap);
+  padding: 0 var(--s-2);
+  border: var(--b-thin) solid var(--border);
+  background: var(--bg);
+  font-size: var(--t-sm);
+  font-weight: 600;
+}
+
+.batch__add:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.batch__add:disabled {
+  opacity: 0.35;
+}

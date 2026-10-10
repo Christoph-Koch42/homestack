@@ -1,0 +1,22 @@
+.section {
+  border-top: var(--b-thick) solid var(--border);
+  padding-top: var(--s-3);
+}
+
+.section__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  margin-bottom: var(--s-4);
+}
+
+.section__title {
+  font-size: var(--t-md);
+  letter-spacing: 0.02em;
+}
+
+/* Bold 19px+ keeps red text readable (AA large text) */
+.section__num {
+  color: var(--accent);
+}
